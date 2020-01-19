@@ -15,8 +15,8 @@ while(True):
     # apply canny edge detection
     # find and fill the contours
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    gray_filtered = cv2.bilateralFilter(gray, 7, 50, 50)
-    edges = cv2.Canny(gray_filtered, 10, 30)    
+    # gray_filtered = cv2.bilateralFilter(gray, 7, 50, 50)
+    edges = cv2.Canny(gray, 10, 30)    
     contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     contour_img = cv2.drawContours(frame.copy(), contours, -1, (255,0,0), thickness=-1)
 
