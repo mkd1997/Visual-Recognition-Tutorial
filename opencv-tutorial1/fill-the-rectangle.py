@@ -10,11 +10,18 @@ while(True):
     # frame has the frame that was read
     ret, frame = cap.read()
 
-    # the operation that we need to do    
+    # convert the image to grayscale
+    # apply bilateral filtering to remove noise (this is necessary)
+    # apply canny edge detection
+    # find and fill the contours
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    gray_filtered = cv2.bilateralFilter(gray, 7, 50, 50)
+    edges = cv2.Canny(gray_filtered, 10, 30)    
+    contours, hierarchy = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contour_img = cv2.drawContours(frame.copy(), contours, -1, (255,0,0), thickness=-1)
 
     # show the output on the screen
-    cv2.imshow("webcam", gray)
+    cv2.imshow("output", contour_img)
 
     # keep doing so until key 'q' is pressed
     if(cv2.waitKey(1) & 0xFF == ord('q')):
