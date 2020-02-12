@@ -1,0 +1,5 @@
+import os
+i = 1
+for file in os.listdir('.'):
+	os.rename(file, 'test_' + str(i) + '.jpeg')
+	i = i + 1
