@@ -1,0 +1,3 @@
+[submodule "Assignments/CIFAR10_Classification"]
+	path = Assignments/CIFAR10_Classification
+	url = https://github.com/mkd1997/CIFAR10_Classification.git
