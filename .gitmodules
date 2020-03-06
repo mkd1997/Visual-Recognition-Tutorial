@@ -1,3 +1,7 @@
 [submodule "Assignments/CIFAR10_Classification"]
 	path = Assignments/CIFAR10_Classification
 	url = https://github.com/mkd1997/CIFAR10_Classification.git
+[submodule "Bike-vs-Horse-classification"]
+	path = Bike-vs-Horse-classification
+	url = https://github.com/mkd1997/Bike-vs-Horse-classification.git
+	branch = master
