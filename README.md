@@ -7,5 +7,5 @@
 - Road Lane Detection (16 - 02 - 19)
 - Image Classification using kNN and hand-crafted features (16 - 02 - 19)
 - CIFAR-10 Classification (24 - 02 - 19)
-
+- Bike vs. Horse Classification (24 - 02 - 19)
 
